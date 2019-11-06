@@ -1,9 +1,5 @@
 method: POST
 headers:
-  Accept:
-  - '*/*'
-  Content-Length:
-  - "5955"
   Content-Type:
   - application/json
   User-Agent:
