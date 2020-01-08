@@ -1,0 +1,113 @@
+method: POST
+headers:
+  Accept:
+  - application/json
+  Accept-Encoding:
+  - gzip,deflate,br
+  Content-Length:
+  - "2963"
+  Content-Type:
+  - application/json
+  From:
+  - noreply@google.com
+  User-Agent:
+  - APIs-Google; (+https://developers.google.com/webmasters/APIs-Google.html)
+body: |
+  {
+    "message": {
+      "attributes": {
+        "buildId": "73a0ee07-0436-453b-9c5b-0933dc43acb8",
+        "status": "FAILURE"
+      },
+      "data": {
+        "id": "73a0ee07-0436-453b-9c5b-0933dc43acb8",
+        "projectId": "my-project",
+        "status": "FAILURE",
+        "source": {
+          "storageSource": {
+            "bucket": "1234567890.cloudbuild-source.googleusercontent.com",
+            "object": "899a9c0d101abcf18f8ad10bda09ca9b5d433241-00143581-c24c-44c1-9663-e4f4f9238a6e.tar.gz"
+          }
+        },
+        "steps": [
+          {
+            "name": "ubuntu",
+            "args": [
+              "exit",
+              "1"
+            ],
+            "timing": {
+              "startTime": "2020-01-08T03:05:32.296178026Z",
+              "endTime": "2020-01-08T03:05:34.005943018Z"
+            },
+            "pullTiming": {
+              "startTime": "2020-01-08T03:05:32.296178026Z",
+              "endTime": "2020-01-08T03:05:33.401675994Z"
+            },
+            "status": "FAILURE"
+          }
+        ],
+        "results": {
+          "buildStepImages": [
+            ""
+          ]
+        },
+        "createTime": "2020-01-08T03:05:25.466753998Z",
+        "startTime": "2020-01-08T03:05:26.993833051Z",
+        "finishTime": "2020-01-08T03:05:35.330051904Z",
+        "timeout": "21600s",
+        "logsBucket": "gs://1234567890.cloudbuild-logs.googleusercontent.com",
+        "sourceProvenance": {
+          "resolvedStorageSource": {
+            "bucket": "1234567890.cloudbuild-source.googleusercontent.com",
+            "object": "899a9c0d101abcf18f8ad10bda09ca9b5d433241-00143581-c24c-44c1-9663-e4f4f9238a6e.tar.gz",
+            "generation": "1578452725158776"
+          },
+          "fileHashes": {
+            "gs://1234567890.cloudbuild-source.googleusercontent.com/899a9c0d101abcf18f8ad10bda09ca9b5d433241-00143581-c24c-44c1-9663-e4f4f9238a6e.tar.gz#1578452725158776": {
+              "fileHash": [
+                {
+                  "type": "MD5",
+                  "value": "I6SMyBsVV5gPD85bG5cQjw=="
+                }
+              ]
+            }
+          }
+        },
+        "buildTriggerId": "527352b5-0878-46be-9a5d-0b1911a8e6d3",
+        "options": {
+          "substitutionOption": "ALLOW_LOOSE",
+          "logging": "LEGACY"
+        },
+        "logUrl": "https://console.cloud.google.com/gcr/builds/73a0ee07-0436-453b-9c5b-0933dc43acb8?project=1234567890",
+        "substitutions": {
+          "BRANCH_NAME": "master",
+          "COMMIT_SHA": "899a9c0d101abcf18f8ad10bda09ca9b5d433241",
+          "REPO_NAME": "test",
+          "REVISION_ID": "899a9c0d101abcf18f8ad10bda09ca9b5d433241",
+          "SHORT_SHA": "899a9c0"
+        },
+        "tags": [
+          "trigger-527352b5-0878-46be-9a5d-0b1911a8e6d3"
+        ],
+        "timing": {
+          "BUILD": {
+            "startTime": "2020-01-08T03:05:32.296143562Z",
+            "endTime": "2020-01-08T03:05:34.087994646Z"
+          },
+          "FETCHSOURCE": {
+            "startTime": "2020-01-08T03:05:27.896856590Z",
+            "endTime": "2020-01-08T03:05:32.236848775Z"
+          }
+        }
+      },
+      "messageId": "928189324911826",
+      "message_id": "928189324911826",
+      "publishTime": "2020-01-08T03:05:35.876Z",
+      "publish_time": "2020-01-08T03:05:35.876Z"
+    },
+    "subscription": "projects/my-project/subscriptions/test"
+  }
+transform:
+  base64:
+  - message.data

@@ -1,0 +1,78 @@
+method: POST
+headers:
+  Accept:
+  - application/json
+  Accept-Encoding:
+  - gzip,deflate,br
+  Content-Length:
+  - "1983"
+  Content-Type:
+  - application/json
+  From:
+  - noreply@google.com
+  User-Agent:
+  - APIs-Google; (+https://developers.google.com/webmasters/APIs-Google.html)
+body: |
+  {
+    "message": {
+      "attributes": {
+        "buildId": "0881e76c-b1dd-4177-935f-dabe0b704702",
+        "status": "WORKING"
+      },
+      "data": {
+        "id": "0881e76c-b1dd-4177-935f-dabe0b704702",
+        "projectId": "my-project",
+        "status": "WORKING",
+        "source": {
+          "storageSource": {
+            "bucket": "1234567890.cloudbuild-source.googleusercontent.com",
+            "object": "c2378520a366568ceafc9d2e3319d5772b4489bf-7e154d0b-d928-4558-9de9-c95f7b095fbd.tar.gz"
+          }
+        },
+        "steps": [
+          {
+            "name": "ubuntu",
+            "args": [
+              "echo",
+              "hello cloudbuild.yaml!"
+            ]
+          }
+        ],
+        "createTime": "2020-01-08T02:59:54.383615117Z",
+        "startTime": "2020-01-08T02:59:55.244634268Z",
+        "timeout": "21600s",
+        "logsBucket": "gs://1234567890.cloudbuild-logs.googleusercontent.com",
+        "sourceProvenance": {
+          "resolvedStorageSource": {
+            "bucket": "1234567890.cloudbuild-source.googleusercontent.com",
+            "object": "c2378520a366568ceafc9d2e3319d5772b4489bf-7e154d0b-d928-4558-9de9-c95f7b095fbd.tar.gz",
+            "generation": "1578452394143515"
+          }
+        },
+        "buildTriggerId": "527352b5-0878-46be-9a5d-0b1911a8e6d3",
+        "options": {
+          "substitutionOption": "ALLOW_LOOSE",
+          "logging": "LEGACY"
+        },
+        "logUrl": "https://console.cloud.google.com/gcr/builds/0881e76c-b1dd-4177-935f-dabe0b704702?project=1234567890",
+        "substitutions": {
+          "BRANCH_NAME": "master",
+          "COMMIT_SHA": "c2378520a366568ceafc9d2e3319d5772b4489bf",
+          "REPO_NAME": "test",
+          "REVISION_ID": "c2378520a366568ceafc9d2e3319d5772b4489bf",
+          "SHORT_SHA": "c237852"
+        },
+        "tags": [
+          "trigger-527352b5-0878-46be-9a5d-0b1911a8e6d3"
+        ]
+      },
+      "messageId": "847293423949717",
+      "message_id": "847293423949717",
+      "publishTime": "2020-01-08T02:59:55.938Z",
+      "publish_time": "2020-01-08T02:59:55.938Z"
+    },
+    "subscription": "projects/my-project/subscriptions/test"
+  }
+transform:
+  base64:
+  - message.data
