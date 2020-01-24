@@ -1,0 +1,32 @@
+method: POST
+headers:
+  Accept:
+  - application/json
+  Accept-Encoding:
+  - gzip,deflate,br
+  Content-Length:
+  - "461"
+  Content-Type:
+  - application/json
+  From:
+  - noreply@google.com
+  User-Agent:
+  - APIs-Google; (+https://developers.google.com/webmasters/APIs-Google.html)
+body: |
+  {
+    "message": {
+      "data": {
+        "action": "INSERT",
+        "digest": "gcr.io/my-project/busybox@sha256:dd97a3fe6d721c5cf03abac0f50e2848dc583f7c4e41bf39102ceb42edfd1808",
+        "tag": "gcr.io/my-project/busybox:latest"
+      },
+      "messageId": "970901561083675",
+      "message_id": "970901561083675",
+      "publishTime": "2020-01-24T03:53:46.67Z",
+      "publish_time": "2020-01-24T03:53:46.67Z"
+    },
+    "subscription": "projects/my-project/subscriptions/gcr"
+  }
+transform:
+  base64:
+  - message.data
